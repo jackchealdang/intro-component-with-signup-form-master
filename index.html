@@ -67,6 +67,8 @@
               id="fname"
               name="fname"
               placeholder="First Name"
+              required
+              maxlength="20"
             />
             <label for="lname"> Last Name </label>
             <input
@@ -74,6 +76,8 @@
               id="lname"
               name="lname"
               placeholder="Last Name"
+              required
+              maxlength="20"
             />
             <label for="email"> Email Address </label>
             <input
@@ -81,6 +85,9 @@
               id="email"
               name="email"
               placeholder="Email Address"
+              required
+              maxlength="40"
+              pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
             />
             <label> Password </label>
             <input
@@ -88,9 +95,11 @@
               id="password"
               name="password"
               placeholder="Password"
+              required
+              maxlength="50"
             />
-          </form>
           <button class="claim-btn"><p>Claim your free trial</p></button>
+          </form>
 
           <div class="agreement-txt">By clicking the button, you are agreeing to our <a href="https://google.com">Terms and Services</a></div>
         </div>
