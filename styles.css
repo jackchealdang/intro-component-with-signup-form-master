@@ -1,0 +1,177 @@
+:root {
+  --bg-desktop: url("./images/bg-intro-desktop.png");
+
+  --width-mobile: 375px;
+  --width-desktop: 1440px;
+
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+
+  --blue: hsl(248, 32%, 49%);
+
+  --darkblue: hsl(249,10%,26%);
+  --grayblue: hsl(246,25%,75%);
+
+  --font: "Poppins";
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: var(--bg-desktop);
+  background-size: cover;
+  background-color: var(--red);
+
+  font-family: var(--font);
+}
+
+h1, p {
+  color: white;
+}
+
+h1 {
+  /* font-weight: 700; */
+  font-size: 3em;
+}
+
+p {
+  font-size: 1em;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 9.5em;
+}
+
+.col-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+
+  box-sizing: border-box;
+  padding-left: 3.5em;
+
+  font-size: 1em;
+}
+
+.col-left h1 {
+  line-height: 1.1em;
+  margin: 0.25em 0;
+}
+
+.col-right {
+  flex-basis: 50%;
+
+  box-sizing: border-box;
+  padding: 0 5.5em;
+}
+
+.col-right > * {
+  box-shadow: 0 7px rgba(0,0,0,0.15)
+}
+
+.trial-btn {
+  background-color: var(--blue);
+  color: white;
+  text-align: center;
+
+  border-radius: 8px;
+  padding: 1.3em;
+
+  margin-bottom: 1.5em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+
+  /* border: 1px solid black; */
+  border-radius: 8px;
+  padding: 3em;
+
+}
+
+.card form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card form label {
+  display: block;
+  height: 0;
+}
+
+.card form input {
+  padding: 1.3em 1.8em;
+  margin-bottom: 1.5em;
+  border-radius: 6px;
+
+  border: 1px solid lightgray;
+
+  font-family: var(--font);
+  font-weight: 700;
+  color: var(--darkblue);
+  caret-color: var(--blue);
+  font-size: 1em;
+  line-height: 1em;
+}
+
+.card form input::placeholder  {
+  font-weight: 700;
+}
+
+.card form input:focus{
+  outline: var(--blue) solid 1px;
+}
+
+.claim-btn {
+  width: 100%;
+  padding: 0.5em 0;
+  margin-bottom: 1.25em;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--green);
+
+  border: 1px solid transparent;
+
+  cursor: pointer;
+}
+
+.claim-btn:hover{
+  border: 1px solid var(--grayblue);
+}
+
+.claim-btn p {
+  font-weight: 700;
+  font-size: 1.3em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.agreement-txt {
+  color: rgba(0,0,0,0.2);
+  font-weight: 600;
+}
+
+.agreement-txt a {
+  text-decoration: none;
+  color: var(--red)
+}
