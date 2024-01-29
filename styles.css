@@ -21,6 +21,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,11 +62,13 @@ main {
   justify-content: center;
   align-items: center;
   flex-basis: 50%;
+  width: 100%;
 
   box-sizing: border-box;
-  padding-left: 3.5em;
+  padding-left: 4em;
+  padding-right: 4em;
 
-  font-size: 1em;
+  font-size: 1.3em;
 }
 
 .col-left h1 {
@@ -77,7 +80,7 @@ main {
   flex-basis: 50%;
 
   box-sizing: border-box;
-  padding: 0 5.5em;
+  padding: 0 4.5em;
 }
 
 .col-right > * {
@@ -132,13 +135,17 @@ main {
   caret-color: var(--blue);
   font-size: 1em;
   line-height: 1em;
+
+  outline: transparent solid 1px;
+  transition: outline 0.2s;
+  box-sizing: border-box;
 }
 
 .card form input::placeholder  {
   font-weight: 700;
 }
 
-.card form input:focus{
+.card form input:focus, .card form input:hover{
   outline: var(--blue) solid 1px;
 }
 
@@ -167,6 +174,7 @@ main {
 }
 
 .agreement-txt {
+  text-align: center;
   color: rgba(0,0,0,0.2);
   font-weight: 600;
 }
@@ -174,4 +182,44 @@ main {
 .agreement-txt a {
   text-decoration: none;
   color: var(--red)
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (max-width: 850px) {
+  main {
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 4em 1.25em;
+  }
+
+  .col-left {
+    flex: 1;
+    text-align: center;
+    padding: 0;
+  }
+
+  .col-left h1 {
+    font-size: 1.25em;
+    line-height: 1.4em;
+    margin: 0.25em;
+  }
+
+  .col-left p {
+    font-size: 0.75em;
+  }
+  
+  .col-right {
+    flex: 1;
+    width: 100%;
+    padding: 0;
+  }
+
+  .card {
+    padding: 1.4em;
+  }
 }
