@@ -60,7 +60,7 @@
       <div class="col-right">
         <div class="trial-btn"><b>Try it free 7 days</b> then $20/mo. thereafter</div>
         <div class="card">
-          <form>
+          <form name="signup" onsubmit="return submitForm()">
             <label for="fname"> First Name </label>
             <input
               type="text"
@@ -87,7 +87,6 @@
               placeholder="Email Address"
               required
               maxlength="40"
-              pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
             />
             <label> Password </label>
             <input
@@ -116,5 +115,6 @@
         >. Coded by <a href="#">Jackcheal Dang</a>.
       </p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
