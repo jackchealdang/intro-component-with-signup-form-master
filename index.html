@@ -32,6 +32,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
+    <script
+      defer
+      src="script.js"
+    ></script>
 
     <title>Frontend Mentor | Intro component with sign up form</title>
 
@@ -60,47 +64,65 @@
       <div class="col-right">
         <div class="trial-btn"><b>Try it free 7 days</b> then $20/mo. thereafter</div>
         <div class="card">
-          <form name="signup" onsubmit="return submitForm()">
-            <label for="fname"> First Name </label>
-            <input
-              type="text"
-              id="fname"
-              name="fname"
-              placeholder="First Name"
-              required
-              maxlength="20"
-            />
-            <label for="lname"> Last Name </label>
-            <input
-              type="text"
-              id="lname"
-              name="lname"
-              placeholder="Last Name"
-              required
-              maxlength="20"
-            />
-            <label for="email"> Email Address </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email Address"
-              required
-              maxlength="40"
-            />
-            <label> Password </label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Password"
-              required
-              maxlength="50"
-            />
-          <button class="claim-btn"><p>Claim your free trial</p></button>
+          <form
+            id="form"
+            name="form"
+          >
+            <div class="input-control">
+              <label for="fname"> First Name </label>
+              <input
+                id="fname"
+                name="fname"
+                type="text"
+                placeholder="First Name"
+                maxlength="20"
+              />
+              <div class="error"></div>
+            </div>
+            <div class="input-control">
+              <label for="lname"> Last Name </label>
+              <input
+                id="lname"
+                name="lname"
+                type="text"
+                placeholder="Last Name"
+                maxlength="20"
+              />
+              <div class="error"></div>
+            </div>
+            <div class="input-control">
+              <label for="email"> Email Address </label>
+              <input
+                id="email"
+                name="email"
+                type="text"
+                placeholder="Email Address"
+                maxlength="40"
+              />
+              <div class="error"></div>
+            </div>
+            <div class="input-control">
+              <label> Password </label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Password"
+                maxlength="50"
+              />
+              <div class="error"></div>
+            </div>
+            <button
+              class="claim-btn"
+              type="submit"
+            >
+              <p>Claim your free trial</p>
+            </button>
           </form>
 
-          <div class="agreement-txt">By clicking the button, you are agreeing to our <a href="https://google.com">Terms and Services</a></div>
+          <div class="agreement-txt">
+            By clicking the button, you are agreeing to our <a href="https://google.com">Terms and Services</a>
+          </div>
         </div>
       </div>
     </main>
@@ -115,6 +137,5 @@
         >. Coded by <a href="#">Jackcheal Dang</a>.
       </p>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>

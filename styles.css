@@ -117,11 +117,6 @@ main {
   width: 100%;
 }
 
-.card form label {
-  display: block;
-  height: 0;
-}
-
 .card form input {
   padding: 0.9em 1.8em;
   margin-bottom: 1.5em;
@@ -145,7 +140,7 @@ main {
   font-weight: 700;
 }
 
-.card form input:focus, .card form input:hover{
+.input-control input:focus, .input-control input:hover{
   outline: var(--blue) solid 1px;
 }
 
@@ -189,6 +184,42 @@ footer {
   position: absolute;
   bottom: 0;
 }
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.input-control label {
+  display: block;
+  height: 0;
+  width: 0;
+}
+
+.input-control input {
+  width: 100%;
+}
+
+/* .input-control.success input {
+  border-color: var(--green);
+} */
+
+.input-control.error input {
+  border: 2px solid var(--red);
+}
+
+.input-control.error input:focus, .input-control.error input:hover {
+  outline: transparent solid 1px;
+}
+
+.input-control .error {
+  color: var(--red);
+  font-size: 0.8em;
+  position: absolute;
+  top: -1.5em;
+}
+
 
 @media screen and (max-width: 850px) {
   main {
