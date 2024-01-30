@@ -6,7 +6,7 @@ function validateEmail() {
 
     console.log(fname, lname, email, password);
 
-    const constraint = new RegExp("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/");
+    const constraint = new RegExp("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$");
     console.log(constraint);
 
     if (constraint.test(email.value)) {
